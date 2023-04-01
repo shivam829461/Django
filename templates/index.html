@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <style>
+        h1,h2{
+            color: rgb(188, 40, 67);
+            font-size: 100px;
+        }
+        p{
+            font-size: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Django Tutorials</h1>
+    
+    <p >{{body}}</p>
+    {% for i in list %}
+    <h3>{{i}}</h3>
+    {% endfor %}
+
+    <!--Table Fetching From Dictionary-->
+    <table border="2" cellpadding="10">
+        <th colspan="2"><Details></Details></th>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+        </tr>
+        {% for d in dictionary %}
+        <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.phone}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <!--  Using If -->
+    {% for i in nums%}
+        {% if i > 2 %}
+        <div>{{i}}</div>
+        {% endif %}
+    {% endfor %}
+
+
+
+
+</body>
+</html>
